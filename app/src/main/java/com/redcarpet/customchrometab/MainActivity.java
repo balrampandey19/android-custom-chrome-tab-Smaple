@@ -27,19 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void openChromeTab() {
-        // Use a CustomTabsIntent.Builder to configure CustomTabsIntent.
-        // Once ready, call CustomTabsIntent.Builder.build() to create a CustomTabsIntent
-        // and launch the desired Url with CustomTabsIntent.launchUrl()
-
-        String url = "https://paul.kinlan.me/";
+       String url = "https://developer.chrome.com/multidevice/android/customtabs/";
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
-
-        // Changes the background color for the omnibox. colorInt is an int
-        // that specifies a Color.
-        builder.setToolbarColor(Color.parseColor("#32cd32"));
-
-
-        CustomTabsIntent customTabsIntent = builder.build();
+        builder.setToolbarColor(Color.parseColor("#32cd32"));     CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
 
 
