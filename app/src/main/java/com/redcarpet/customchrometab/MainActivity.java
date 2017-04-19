@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         // Add action button
 
         Intent actionIntent = new Intent(Intent.ACTION_DIAL);
-        actionIntent.setData(Uri.parse("tel:18001234567"));
+        actionIntent.setData(Uri.parse("tel: 1234567890"));
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, actionIntent, 0);
         builder.setActionButton(mActionCallIcon, "Call", pendingIntent);
 
@@ -68,8 +68,6 @@ public class MainActivity extends AppCompatActivity {
         shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this website: " + "");
         PendingIntent menuIntent = PendingIntent.getActivity(this, 0, shareIntent, 0);
         builder.addMenuItem("Share Textx", menuIntent);
-
-
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
 
