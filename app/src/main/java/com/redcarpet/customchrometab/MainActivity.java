@@ -43,11 +43,15 @@ public class MainActivity extends AppCompatActivity {
 
         builder.setToolbarColor(Color.parseColor("#32cd32"));
 
-
-
         // Display custom back button
 
         builder.setCloseButtonIcon(mActionBackIcon);
+
+        // Add custom entrance/exit animations
+
+        builder.setStartAnimations(this, R.anim.slide_in_right, R.anim.slide_out_left);
+        builder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
+
 
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
