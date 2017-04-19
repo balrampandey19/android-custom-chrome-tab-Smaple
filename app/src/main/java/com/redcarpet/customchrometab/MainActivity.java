@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
         // Set the Toolbar color
 
-        builder.setToolbarColor(Color.parseColor("#32cd32"));
+        builder.setToolbarColor(Color.parseColor("#FF0000"));
 
         // Display custom back button
 
