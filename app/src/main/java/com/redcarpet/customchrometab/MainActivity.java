@@ -61,6 +61,15 @@ public class MainActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, actionIntent, 0);
         builder.setActionButton(mActionCallIcon, "Call", pendingIntent);
 
+        // Add custom menu items
+
+        Intent shareIntent = new Intent(Intent.ACTION_SEND);
+        shareIntent.setType("text/plain");
+        shareIntent.putExtra(Intent.EXTRA_TEXT, "Check out this website: " + "");
+        PendingIntent menuIntent = PendingIntent.getActivity(this, 0, shareIntent, 0);
+        builder.addMenuItem("Share Textx", menuIntent);
+
+
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
 
