@@ -1,5 +1,7 @@
 package com.redcarpet.customchrometab;
 
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
         builder.setStartAnimations(this, R.anim.slide_in_right, R.anim.slide_out_left);
         builder.setExitAnimations(this, android.R.anim.slide_in_left, android.R.anim.slide_out_right);
 
+        // Add action button
+
+        Intent actionIntent = new Intent(Intent.ACTION_DIAL);
+        actionIntent.setData(Uri.parse("tel:18001234567"));
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, actionIntent, 0);
+        builder.setActionButton(mActionCallIcon, "Call", pendingIntent);
 
         CustomTabsIntent customTabsIntent = builder.build();
         customTabsIntent.launchUrl(this, Uri.parse(url));
