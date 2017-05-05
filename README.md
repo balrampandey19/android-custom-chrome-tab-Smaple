@@ -4,7 +4,7 @@ Chrome Custom Tabs give apps more control over their web experience, and make tr
 
 Chrome Custom Tabs allow an app to customize how Chrome looks and feels. An app can change things like:
 
-~ Toolbar color
+  -> Toolbar color
 
 ~ Enter and exit animations
 
