@@ -8,7 +8,7 @@ Chrome Custom Tabs allow an app to customize how Chrome looks and feels. An app 
 
   -> Enter and exit animations
 
-~ Add custom actions to the Chrome toolbar, overflow menu and bottom toolbar
+  -> Add custom actions to the Chrome toolbar, overflow menu and bottom toolbar
 
   https://developer.chrome.com/multidevice/android/customtabs
 
